@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    background-color: #FBFEFD;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    height: 60px;
+    width: 100%;
+    top: 0;
+    z-index: 222;
+    position: fixed;
+}
+
+nav h3 {
+    margin: auto 0;
+    font-size: 22px;
+}
+
+nav h3 span {
+    color: orange;
+    font-size: 22px;
+}
+
+nav .nav {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    position: relative;
+    margin: auto 0;
+    justify-content: space-evenly;
+}
+
+nav .nav .nav-item {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+nav .nav .nav-item::after {
+    z-index: 1;
+    content: "";
+    height: 3px;
+    width: 0;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+}
+
+nav .nav .nav-item:hover::after {
+    width: 100%;
+    /* background: red; */
+}
+
+nav .nav .nav-item a {
+    text-decoration: none;
+    color: #707070;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+nav .nav .nav-item a:hover {
+    color: orange;
+}
+
+.nav-item .nav-link.active {
+    font-weight: bold;
+    color: orange;
+}
+
+/* Home */
+
+.home {
+    position: relative;
+    background-color: #FBFEFD;
+    width: 100%;
+    height: 90vh;
+    margin-top: 65px;
+}
+
+.home-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-menu .profile {
+    height: 80vh;
+    width: 50%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile .sosmed {
+    display: flex;
+    width: 60%;
+}
+
+.profile .sosmed li {
+    list-style: none;
+    margin: 0 20px 0 0;
+    border: 2px solid orange;
+    padding: 3px 8px;
+    border-radius: 50%;
+}
+
+.profile .sosmed li:hover {
+    background-color: orange;
+}
+
+.profile .sosmed li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.profile .sosmed li a:hover {
+    color: white;
+}
+
+.profile h3 {
+    margin: 8px 0;
+}
+
+.profile h3 span {
+    color: orange;
+    font-weight: bold;
+}
+
+.profile .btn-cv {
+    margin-top: 5px;
+    border: 2px solid orange;
+    width: max-content;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #000;
+    font-size: 15px;
+}
+
+.profile .btn-cv:hover {
+    background-color: orange;
+    color: white;
+}
+
+.home-menu .images {
+    width: 50%;
+    height: 80vh;
+    position: absolute;
+    right: 100px;
+}
+
+.images img {
+    height: 100%;
+    position: absolute;
+    left: 60%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+.images:hover .shape {
+    bottom: 30px;
+}
+
+.images:hover .girl {
+    left: 50%;
+}
+
+
+/* Services */
+.services {
+    padding: 20px 0;
+    height: auto;
+    width: 100%;
+}
+
+.services h3 {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.services .subtitle {
+    text-align: center;
+    font-weight: bold;
+    font: 20px;
+    color: #707070;
+}
+
+.services .text-body {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.text-body p {
+    text-align: center;
+}
+
+.body-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.body-services .card {
+    width: 100%;
+    height: 200px;
+    background-color: #e0e0e0;
+}
+
+/* Transision */
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
+}
+
+.active.fade-top {
+    animation: fade-top 1s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

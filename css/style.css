@@ -171,7 +171,7 @@ nav .nav .nav-item a:hover {
 }
 
 .images img {
-    height: 100%;
+    height: 80%;
     position: absolute;
     left: 60%;
     bottom: 0;
@@ -537,5 +537,45 @@ h3 span {
         flex-direction: column;
         justify-content: center;
         margin-top: 400px;
+    }
+
+    .home-menu .images {
+        width: 100%;
+        height: 80vh;
+        position: absolute;
+        /* right: 100px; */
+        z-index: 20;
+        /* background-color: blue; */
+        /* overflow: hidden; */
+    }
+
+    .images img {
+        height: 100%;
+        position: absolute;
+        left: 60%;
+        bottom: 0;
+        transform: translateX(-50%);
+        transition: bottom 1s, left 1s;
+        /* background-color: black; */
+    }
+
+    .images .shape {
+        left: 75%;
+        /* width: 100%; */
+        height: 88%;
+    }
+
+    .images:hover .shape {
+        bottom: 30px;
+        /* width: px; */
+    }
+
+    .images .girl {
+        height: 85%;
+        left: 90%;
+    }
+
+    .images:hover .girl {
+        left: 80%;
     }
 }

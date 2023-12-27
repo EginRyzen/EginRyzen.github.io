@@ -218,7 +218,6 @@ h3 span {
     height: auto;
     margin: 0 auto;
     position: relative;
-    /* Tambahkan properti ini */
 }
 
 .services .text-body::after {
@@ -515,73 +514,144 @@ h3 span {
         display: flex;
     }
 
+
+    /* Home */
     .home {
         position: relative;
         background-color: #FBFEFD;
         width: 100%;
-        height: auto;
-        /* margin-top: 65px; */
+        height: 100%;
+        margin-top: 65px;
     }
 
     .home-menu {
+        /* background-color: blue; */
+        height: 100%;
+        box-sizing: border-box;
         display: flex;
         flex-direction: row-reverse;
         justify-content: flex-end;
+        /* display: flex;
+        flex-direction: column-reverse;
+        align-items: center; */
     }
 
     .home-menu .profile {
-        height: 80vh;
+        /* background-color: aqua; */
+        margin-top: 550px;
         width: 100%;
-        padding: 30px;
+        /* padding: 30px; */
+        box-sizing: border-box;
+        height: 60vh;
+    }
+
+    .profile .sosmed {
+        margin: 0 auto;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        margin-top: 350px;
+    }
+
+    .profile .sosmed li {
+        list-style: none;
+        margin: 0 10px 0 0;
+        border: 2px solid orange;
+        padding: 3px 8px;
+        border-radius: 50%;
+    }
+
+    .profile .sosmed li:hover {
+        background-color: orange;
+    }
+
+    .profile .sosmed li a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+    .profile .sosmed li a:hover {
+        color: white;
+    }
+
+    .profile h3 {
+        margin: 8px 0;
+        text-align: center;
+    }
+
+    .profile h3 span {
+        color: orange;
+        font-weight: bold;
+    }
+
+    .profile p {
+        text-align: center;
+    }
+
+    .profile .btn-cv {
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+        font-size: 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .profile .btn-cv:hover {
+        background-color: orange;
+        color: white;
     }
 
     .home-menu .images {
-        /* background-color: darkcyan; */
-        /* height: 100%; */
+        /* background-color: #000; */
         width: 100%;
-        height: 60vh;
-        position: absolute;
-        right: 100px;
-        z-index: 20;
-        /* background-color: blue; */
-        /* overflow: hidden; */
-        display: block;
-        justify-content: center;
-        align-items: center;
+        height: 70vh;
+        /* margin-top: 20px; */
     }
 
     .images img {
-        display: block;
-        height: 60%;
+        width: 100%;
+        height: auto;
+        /* Allow the height to adjust based on the aspect ratio */
+        max-height: 70vh;
+        /* Limit the maximum height to 80% of the viewport height */
+        object-fit: cover;
+        /* Maintain aspect ratio and cover the container */
         position: absolute;
-        left: 60%;
-        /* bottom: 0; */
+        left: 50%;
+        bottom: 0;
         transform: translateX(-50%);
         transition: bottom 1s, left 1s;
-        /* background-color: black; */
     }
 
+
     .images .shape {
-        left: 75%;
-        /* width: 100%; */
-        height: 60%;
+        left: 80%;
+    }
+
+    .images .girl {
+        left: 80%;
     }
 
     .images:hover .shape {
         bottom: 30px;
-        /* width: px; */
-    }
-
-    .images .girl {
-        height: 60%;
-        left: 90%;
     }
 
     .images:hover .girl {
-        left: 80%;
+        left: 50%;
     }
+
+
+    /* Services */
+    .services .text-body {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        /* Tambahkan properti ini */
+    }
+
 }

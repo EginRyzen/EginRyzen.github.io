@@ -190,6 +190,7 @@ nav .nav .nav-item a:hover {
 
 /* Services */
 .services {
+    background-color: #f2f2f2;
     padding: 20px 0;
     height: auto;
     width: 100%;
@@ -199,6 +200,10 @@ nav .nav .nav-item a:hover {
     text-align: center;
     font-weight: bold;
     padding: 10px 0;
+}
+
+h3 span {
+    color: orange;
 }
 
 .services .subtitle {
@@ -212,13 +217,30 @@ nav .nav .nav-item a:hover {
     width: 40%;
     height: auto;
     margin: 0 auto;
+    position: relative;
+    /* Tambahkan properti ini */
+}
+
+.services .text-body::after {
+    z-index: 1;
+    content: "";
+    height: 3px;
+    width: 100px;
+    background: orange;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    transition: 0.5s;
 }
 
 .text-body p {
     text-align: center;
 }
 
+
 .body-services {
+    margin: 50px 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
@@ -227,8 +249,88 @@ nav .nav .nav-item a:hover {
 .body-services .card {
     width: 100%;
     height: 200px;
-    background-color: #e0e0e0;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    color: white;
+    transition: transform 0.3s ease-in-out;
 }
+
+.body-services .card:hover {
+    transform: scale(1.05);
+}
+
+.card i {
+    font-size: 40px;
+    color: orange;
+    margin: 10px 0;
+}
+
+.card-header {
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.card-header h4 span {
+    color: orange;
+}
+
+.card-body {
+    padding: 0px 20px 10px 20px;
+}
+
+.card-body p {
+    font-size: 13px;
+    color: white;
+}
+
+/* About Us */
+.about {
+    background-color: #FBFEFD;
+    padding: 20px 0;
+    height: auto;
+    width: 100%;
+}
+
+.about h3 {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.about .subtitle {
+    text-align: center;
+    font-weight: bold;
+    font: 20px;
+    color: #707070;
+}
+
+.about .text-body {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    /* Tambahkan properti ini */
+}
+
+.about .text-body::after {
+    z-index: 1;
+    content: "";
+    height: 3px;
+    width: 100px;
+    background: orange;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+
+.text-body p {
+    text-align: center;
+}
+
+
 
 /* Transision */
 .reveal {
@@ -246,6 +348,14 @@ nav .nav .nav-item a:hover {
 
 .active.fade-top {
     animation: fade-top 1s ease-in;
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+    animation: fade-right 1s ease-in;
 }
 
 @keyframes fade-bottom {
@@ -268,6 +378,50 @@ nav .nav .nav-item a:hover {
 
     100% {
         transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateX(-35px);
+        opacity: 0.5;
+    }
+
+    60% {
+        transform: translateX(-20px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateX(35px);
+        opacity: 0.5;
+    }
+
+    60% {
+        transform: translateX(20px);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateX(0);
         opacity: 1;
     }
 }

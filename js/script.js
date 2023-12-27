@@ -1,3 +1,23 @@
+//Humberger button
+const menuToggle = document.querySelector('.menu-toggle input');
+const nav = document.querySelector('nav ul');
+const h3 = document.querySelector('nav h3');
+
+menuToggle.addEventListener('click', function () {
+    if (this.checked) {
+        h3.style.opacity = 0;
+        h3.style.visibility = 'hidden';
+    } else {
+        h3.style.opacity = 1;
+        h3.style.visibility = 'visible';
+    }
+
+    // Toggle the 'slide' class on the nav element
+    nav.classList.toggle('slide');
+});
+
+
+//Animasi Scroll
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
 
@@ -19,28 +39,21 @@ window.addEventListener("scroll", reveal);
 
 
 
-// 1. tangkap element dengan class menu
+//Navbar Click
 const menu = document.querySelector(".nav");
 
-// 2. jika element dengan class menu diklik
 menu.addEventListener('click', function (e) {
-    // 3. maka ambil element apa yang diklik oleh user
     const targetMenu = e.target;
 
-    // 4. lalu cek, jika element itu adalah link dengan class menu__link
     if (targetMenu.classList.contains('nav-link')) {
 
-        // 5. maka ambil menu link yang aktif
         const menuLinkActive = document.querySelector("ul li a.active");
 
-        // 6. lalu cek, Jika menu link active ada dan menu yang di klik user adalah menu yang tidak sama dengan menu yang aktif, (cara cek-nya yaitu dengan membandingkan value attribute href-nya)
         if (menuLinkActive !== null && targetMenu.getAttribute('href') !== menuLinkActive.getAttribute('href')) {
 
-            // 7. maka hapus class active pada menu yang sedang aktif
             menuLinkActive.classList.remove('active');
         }
 
-        // 8. terakhir tambahkan class active pada menu yang di klik oleh user
         targetMenu.classList.add('active');
     }
 });

@@ -175,7 +175,7 @@ nav .nav .nav-item a:hover {
     position: absolute;
     left: 60%;
     bottom: 0;
-    transform: translateX(-50%);
+    transform: translateX(-30%);
     transition: bottom 1s, left 1s;
 }
 
@@ -194,6 +194,8 @@ nav .nav .nav-item a:hover {
     padding: 20px 0;
     height: auto;
     width: 100%;
+    position: relative;
+    overflow: hidden;
 }
 
 .services h3 {
@@ -291,6 +293,11 @@ h3 span {
     width: 100%;
 }
 
+.header-about {
+    position: relative;
+    width: 100%;
+}
+
 .about h3 {
     text-align: center;
     font-weight: bold;
@@ -325,9 +332,63 @@ h3 span {
     transition: 0.5s;
 }
 
-.text-body p {
+.about .text-body p {
     text-align: center;
 }
+
+.about-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.images-about {
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+}
+
+.images-about img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.deskripsi-about {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.deskripsi-about h3 {
+    text-align: start;
+}
+
+.about-contact {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.about-contact .card-about {
+    width: 45%;
+}
+
+.card-about h5 {
+    color: #000;
+}
+
+.card-about p {
+    color: #707070;
+}
+
 
 
 /* Hambuger Menu*/
@@ -652,6 +713,43 @@ h3 span {
         margin: 0 auto;
         position: relative;
         /* Tambahkan properti ini */
+    }
+
+    /* About */
+    .about .text-body {
+        width: 100%;
+    }
+
+    .about-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .images-about {
+        width: 100%;
+    }
+
+    .deskripsi-about {
+        width: 100%;
+    }
+
+    .about-contact {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .about-contact .card-about {
+        width: 50%;
+    }
+
+    .card-about h5 {
+        color: #000;
+    }
+
+    .card-about p {
+        color: #707070;
     }
 
 }

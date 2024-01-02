@@ -20,6 +20,7 @@ menuToggle.addEventListener('click', function () {
 //Animasi Scroll
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
+    var navLink = document.querySelectorAll('.nav-link');
 
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
@@ -30,6 +31,7 @@ function reveal() {
         if (elementTop < windowHeight && elementBottom >= 0) {
             reveals[i].classList.add("active");
         } else {
+            // navLink.classList.remove("active");
             reveals[i].classList.remove("active");
         }
     }
@@ -37,25 +39,22 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
+/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
+const sections = document.querySelectorAll('section[id]')
 
+function scrollActive() {
+    const scrollY = window.pageYOffset
 
-//Navbar Click
-const menu = document.querySelector(".nav");
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight
+        const sectionTop = current.offsetTop - 50;
+        sectionId = current.getAttribute('id')
 
-menu.addEventListener('click', function (e) {
-    const targetMenu = e.target;
-
-    if (targetMenu.classList.contains('nav-link')) {
-
-        const menuLinkActive = document.querySelector("ul li a.active");
-
-        if (menuLinkActive !== null && targetMenu.getAttribute('href') !== menuLinkActive.getAttribute('href')) {
-
-            menuLinkActive.classList.remove('active');
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.nav a[href*=' + sectionId + ']').classList.add('active')
+        } else {
+            document.querySelector('.nav a[href*=' + sectionId + ']').classList.remove('active')
         }
-
-        targetMenu.classList.add('active');
-    }
-});
-
-
+    })
+}
+window.addEventListener('scroll', scrollActive)

@@ -320,7 +320,6 @@ h3 span {
     height: auto;
     margin: 0 auto;
     position: relative;
-    /* Tambahkan properti ini */
 }
 
 .about .text-body::after {
@@ -501,6 +500,11 @@ h3 span {
     height: 200px;
     border-radius: 20px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-work .img img:hover {
+    transform: scale(1.05);
 }
 
 .carousel .card-work h2 {

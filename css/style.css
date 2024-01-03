@@ -137,7 +137,7 @@ nav .nav .nav-item a:hover {
     font-size: 20px;
 }
 
-.profile .sosmed li a:hover {
+.profile .sosmed li:hover a {
     color: white;
 }
 

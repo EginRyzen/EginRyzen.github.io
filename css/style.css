@@ -519,6 +519,72 @@ h3 span {
     text-align: center;
 }
 
+footer {
+    box-shadow: -3px -3px 2px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to bottom right, orange, #e4c48c);
+    width: 100%;
+    height: auto;
+}
+
+footer p {
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+}
+
+footer .footer {
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    height: auto;
+}
+
+.footer .card-footer {
+    text-align: center;
+    /* background-color: red; */
+}
+
+.footer .card-footer h3 {
+    margin: 20px 0px;
+    color: #FBFEFD;
+}
+
+.footer .card-footer p {
+    color: #fff;
+}
+
+ul.follow-me {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+ul.follow-me li {
+    list-style: none;
+    margin: 0 10px 0 0;
+    border: 2px solid #fff;
+    padding: 9px 15px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+ul.follow-me li:hover {
+    background-color: white;
+}
+
+.follow-me li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+}
+
+ul.follow-me li:hover a {
+    color: #000;
+}
+
+
+
 
 
 /* Hambuger Menu*/

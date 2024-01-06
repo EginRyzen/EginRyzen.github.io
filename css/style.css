@@ -9,6 +9,21 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    animation: smoothScroll 1 cubic-bezier(1.25, 1.46, 1.45, 1.94);
+}
+
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
 .container {

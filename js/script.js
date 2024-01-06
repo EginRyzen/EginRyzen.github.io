@@ -1,3 +1,36 @@
+// script.js
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Fungsi untuk menanggapi peristiwa klik
+    function smoothScroll(target) {
+        document.querySelector(target).scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
+
+    // Menambahkan event listener untuk setiap menu item
+    document.getElementById('home').addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothScroll('#home-section');
+    });
+
+    document.getElementById('services').addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothScroll('#services-section');
+    });
+
+    document.getElementById('about').addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothScroll('#about-section');
+    });
+
+    document.getElementById('contact').addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothScroll('#contact-section');
+    });
+});
+
+
 //Humberger button
 const menuToggle = document.querySelector('.menu-toggle input');
 const nav = document.querySelector('nav ul');

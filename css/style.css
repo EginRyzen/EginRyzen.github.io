@@ -553,15 +553,15 @@ footer p {
 
 footer .footer {
     padding: 40px 0px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
     gap: 20px;
     height: auto;
+    flex-wrap: wrap;
 }
 
 .footer .card-footer {
     text-align: center;
-    /* background-color: red; */
+    width: 30%;
 }
 
 .footer .card-footer h3 {
@@ -757,7 +757,6 @@ ul.follow-me li:hover a {
         opacity: 1;
     }
 }
-
 
 @media screen and (max-width: 576px) {
 
@@ -970,6 +969,10 @@ ul.follow-me li:hover a {
     /* Rencent Work */
     .wrapper .carousel {
         grid-auto-columns: 100%;
+    }
+
+    .footer .card-footer {
+        width: 100%;
     }
 
 }
